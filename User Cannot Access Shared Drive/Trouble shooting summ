@@ -1,0 +1,13 @@
+Troubleshooting Summary
+
+Initial troubleshooting began by verifying network connectivity between the client machine and the file server using ping, confirming successful communication within the same network and Microsoft Azure virtual environment.
+
+Further investigation confirmed that the shared path was reachable, indicating no routing or DNS-related issues.
+
+Access was then reviewed at the permission level. NTFS and share permissions on the file server were examined and found to be missing or incorrectly configured for the intended user group.
+
+The appropriate security group was updated by adding the affected user into the correct Active Directory group within Active Directory.
+
+After updating group membership, permissions were re-applied and Group Policy was refreshed to ensure changes propagated correctly.
+
+Final validation was performed by re-accessing the shared network drive, confirming successful authentication and access restoration.
